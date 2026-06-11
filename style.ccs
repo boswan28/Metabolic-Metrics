@@ -1,3 +1,4 @@
+```css
 * {
     box-sizing: border-box;
 }
@@ -9,42 +10,66 @@ html {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #111;
-    background: #eef7f4;
+    color: #111111;
+    background-color: #eef7f4;
     line-height: 1.7;
 }
 
 header {
-    min-height: 75vh;
-    padding: 70px 10%;
+    min-height: 80vh;
     color: white;
     background:
-        linear-gradient(rgba(0, 80, 110, 0.82), rgba(32, 130, 78, 0.82)),
-        url("images/harvard-healthy-plate.png");
+        linear-gradient(rgba(4, 70, 99, 0.88), rgba(47, 158, 68, 0.82)),
+        url("images/image.png");
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    padding: 70px 10%;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 header h1 {
     font-size: 4rem;
-    max-width: 900px;
-    margin: 0 0 20px;
     line-height: 1.05;
+    margin: 15px 0;
 }
 
-header p {
-    font-size: 1.3rem;
-    max-width: 750px;
+.hero-text {
+    font-size: 1.25rem;
+    max-width: 760px;
+}
+
+.button {
+    display: inline-block;
+    background-color: white;
+    color: #064663;
+    padding: 13px 22px;
+    border-radius: 999px;
+    margin-top: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #d8f3dc;
 }
 
 nav {
     position: sticky;
     top: 0;
-    z-index: 10;
-    background: white;
+    z-index: 20;
+    background-color: white;
     border-bottom: 3px solid #2f9e44;
     padding: 15px 8%;
     text-align: center;
@@ -65,13 +90,13 @@ section {
     max-width: 1100px;
     margin: 45px auto;
     padding: 45px;
-    background: white;
+    background-color: white;
     border-radius: 18px;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
 }
 
 h2 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     color: #064663;
     margin-top: 0;
     border-left: 8px solid #2f9e44;
@@ -80,56 +105,76 @@ h2 {
 
 h3 {
     color: #2f9e44;
-    margin-top: 28px;
+    margin-top: 25px;
 }
 
 p {
     font-size: 1.05rem;
 }
 
-#values,
-#about {
+a {
+    color: #064663;
+}
+
+.claim-box {
+    background-color: #eef7f4;
+    border-left: 8px solid #2f9e44;
+    border-radius: 14px;
+    padding: 22px;
+    margin: 25px 0;
+}
+
+.claim-box h3 {
+    margin-top: 0;
+    color: #064663;
+}
+
+.card-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 30px 0;
 }
 
-#values h2,
-#about h2 {
-    grid-column: 1 / -1;
+.card {
+    background-color: #f8fffc;
+    border: 1px solid #cce3dc;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
-#values h3,
-#about h3 {
-    background: #eef7f4;
-    padding: 18px 18px 0;
-    border-radius: 14px 14px 0 0;
-    margin-bottom: 0;
+.card h3 {
+    margin-top: 0;
+    color: #064663;
 }
 
-#values h3 + p,
-#about h3 + p {
-    background: #eef7f4;
-    padding: 0 18px 18px;
-    border-radius: 0 0 14px 14px;
+.media-card {
+    background-color: #f8fffc;
+    border: 1px solid #cce3dc;
+    border-radius: 18px;
+    padding: 26px;
+    margin: 30px 0;
+}
+
+.media-card h3 {
+    color: #064663;
     margin-top: 0;
 }
 
-#advocacy h3 {
-    border-bottom: 2px solid #d8eee6;
-    padding-bottom: 6px;
-}
-
-#media {
-    background: #ffffff;
-}
-
-#media img {
+img {
     max-width: 100%;
     display: block;
-    margin: 25px auto 10px;
+    margin: 24px auto 10px;
     border-radius: 16px;
     border: 2px solid #d8eee6;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #444444;
 }
 
 .video-container {
@@ -143,15 +188,11 @@ p {
     height: 500px;
     border: none;
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 
 ul {
     line-height: 2;
-}
-
-a {
-    color: #064663;
 }
 
 footer {
@@ -159,16 +200,25 @@ footer {
     color: white;
     text-align: center;
     padding: 35px;
+    margin-top: 50px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+    header {
+        padding: 50px 7%;
+    }
+
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
 
     section {
-        padding: 28px;
         margin: 25px 12px;
+        padding: 28px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
     }
 
     .video-container iframe {
@@ -180,3 +230,4 @@ footer {
         margin: 6px;
     }
 }
+```
